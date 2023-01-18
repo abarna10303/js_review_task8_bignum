@@ -1,0 +1,40 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: sans-serif;
+}
+.container
+{
+    margin: 0 auto;
+    width: 85%;
+    background-color: #000000ab;
+    padding: 50px;
+}
+.row
+{
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgb(63, 63, 63);
+   
+    padding: 50px;
+}
+h1,h3
+{
+    color: white;
+    margin-bottom: 10px;
+}
+.box,#ans_btn
+{
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+}
+#ans_btn{
+    background-color: gray;
+    color: white;
+    border: none;
+}

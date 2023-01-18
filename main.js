@@ -1,45 +1,83 @@
-let a=parseInt(prompt("Enter the First number"));
-let b=parseInt(prompt("Enter the Second number"));
-let c=parseInt(prompt("Enter the Thrid number"));
-let d=parseInt(prompt("Enter the Fourth number"))
-if(a>b && a>c && a>d)
+let container=document.querySelector(".container");
+
+let row=document.createElement("div");
+row.setAttribute("class","row");
+container.appendChild(row);
+let finum=document.createElement("input");
+finum.setAttribute("id","firstnum");
+finum.setAttribute("class","box");
+row.appendChild(finum);
+
+
+let se_num=document.createElement("input");
+se_num.setAttribute("id","secondnum");
+se_num.setAttribute("class","box");
+row.appendChild(se_num);
+
+
+let th_num=document.createElement("input");
+th_num.setAttribute("id","thridnum");
+th_num.setAttribute("class","box");
+row.appendChild(th_num);
+
+
+let fr_num=document.createElement("input");
+fr_num.setAttribute("id","fourthnum");
+fr_num.setAttribute("class","box");
+row.appendChild(fr_num);
+
+
+let submit_btn=document.createElement("button");
+submit_btn.setAttribute("id","ans_btn");
+submit_btn.innerText="Submit";
+row.appendChild(submit_btn);
+
+let para=document.createElement("div");
+para.setAttribute("id","order");
+row.appendChild(para);
+
+submit_btn.addEventListener("click",function(){
+    var a=parseInt(document.getElementById("firstnum").value);
+    var b=parseInt(document.getElementById("secondnum").value);
+    var c=parseInt(document.getElementById("thridnum").value);
+    var d=parseInt(document.getElementById("fourthnum").value);
+
+    if(a>b && a>c && a>d)
 {
     if(b>c && b>d)
     {
         if(c>d)
         {
-            document.write(d," ",c," ",b," ",a);
+            para.innerText=(d+"  "+c+"  "+b+"  "+a);
         }
         else
         {
-            document.write(c," ",d," ",b," ",a);
+            para.innerText=(c+"  "+d+"  "+b+"  "+a);
         }
-    }
-    else
-    {
-        if(c>b && c>d)
+    }   
+    else if(c>b && c>d)
         {
             if(b>d)
             {
-                document.write(d," ",b," ",c," ",a);
+                para.innerText=(d+" "+b+" "+c+" "+a);
             }
             else
             {
-                document.write(b," ",d," ",c," ",a);
+                para.innerText=(b+" "+d+" "+c+" "+a);
             }
         }
         else if(d>b && d>c)
         {
             if(b>c)
             {
-                document.write(c," ",b," ",d," ",a);
+                para.innerText=(c+" "+b+" "+d+" "+a);
             }
             else
             {
-                document.write(b," ",c," ",d," ",a);
+                para.innerText=(b+" "+c+" "+d+" "+a);
             }
         }
-    }
+    
 }
 else if(b>a && b>c && b>d)
 {
@@ -47,75 +85,70 @@ else if(b>a && b>c && b>d)
     {
         if(c>d)
         {
-            document.write(d," ",c," ",a," ",b);
+            para.innerText=(d+" "+c+" "+a+" "+b);
         }
         else
         {
-            document.write(c," ",d," ",a," ",b);
+            para.innerText=(c+" "+d+" "+a+" "+b);
         }
     }
-    else
-    {
-        if(c>a && c>d)
+    else if(c>a && c>d)
         {
             if(a>d)
             {
-                document.write(d," ",a," ",c," ",b);
+                para.innerText=(d+" "+a+" "+c+" "+b);
             }
             else
             {
-                document.write(a," ",d," ",c," ",b);
+                para.innerText=(a+" "+d+" "+c+" "+b);
             }
         }
-        else
-        {
-            if(d>a && d>c)
+     else if(d>a && d>c)
             {
                 if(a>c)
                 {
-                    document.write(c," ",a," ",d," ",b);
+                    para.innerText=(c+" "+a+" "+d+" "+b);
                 }
                 else
                 {
-                    document.write(a," ",c," ",d," ",b);
+                    para.innerText=(a+" "+c+" "+d+" "+b);
                 }
             }
-        }
-    }
 }
+
 else if(c>a && c>b && c>d)
 {
     if(b>a && b>d)
     {
         if(a>d)
         {
-            document.write(d," ",a," ",b," ",c);
+            para.innerText=(d+" "+a+" "+b+" "+c);
         }
         else
         {
-            document.write(a," ",d," ",b," ",c);
+            para.innerText=(a+" "+d+" "+b+" "+c);
         }
     }
     else if(a>b && a>d)
     {
         if(b>d)
         {
-            document.write(d," ",b," ",a," ",c);
+            para.innerText=(d+" "+b+" "+a+" "+c);
         }
         else
         {
-            document.write(b," ",d," ",a," ",c);
+            para.innerText=(b+" "+d+" "+a+" "+c);
         }
     }
     else if(d>a && d>b)
     {
         if(a>b)
         {
-            document.write(b," ",a," ",d," ",c);
+            para.innerText=(b+" "+a+" "+d+" "+c);
         }
         else
         {
-            document.write(a," ",b," ",d," ",c);
+            para.innerText=(a+" "+b+" "+d+" "+c);
         }
     }
 }
@@ -125,33 +158,34 @@ else if(d>a && d>b && d>c)
     {
         if(b>c)
         {
-            document.write(c," ",b," ",a," ",d);
+            para.innerText=(c+" "+b+" "+a+" "+d);
         }
         else
         {
-            document.write(b," ",c," ",a," ",d);
+            para.innerText=(b+" "+c+" "+a+" "+d);
         }
     }
     else if(b>a && b>c)
     {
         if(a>c)
         {
-            document.write(c," ",a," ",b," ",d);
+            para.innerText=(c+" "+a+" "+b+" "+d);
         }
         else
         {
-            document.write(a," ",c," ",b," ",d)
+            para.innerText=(a+" "+c+" "+b+" "+d)
         }
     }
     else if(c>a && c>b)
     {
         if(a>b)
         {
-            document.write(b," ",a," ",c," ",d)
+            para.innerText=(b+" "+a+" "+c+" "+d)
         }
         else
         {
-            document.write(a," ",b," ",c," ",d);
+            para.innerText=(a+" "+b+" "+c+" "+d);
         }
     }
 }
+});
